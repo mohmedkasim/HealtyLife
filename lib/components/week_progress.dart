@@ -19,6 +19,7 @@ class WeekProgress extends StatelessWidget {
             percent: value,
             animateFromLastPercent: true,
             progressColor: Colors.green,
+            circularStrokeCap: CircularStrokeCap.round,
           ),
           SizedBox(
             height: 10,
