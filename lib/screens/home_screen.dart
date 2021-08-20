@@ -20,110 +20,112 @@ class _HomeScreenState extends State<HomeScreen> {
       color: Colors.white,
       child: SafeArea(
         child: Scaffold(
-          body: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 25),
-            child: Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        Image.asset(
-                          'assets/images/healthy.png',
-                          width: 40,
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Column(
-                          children: [
-                            Row(
-                              children: [
-                                Text(
-                                  "Healthy Life",
-                                  style: TextStyle(fontSize: 20),
-                                ),
-                              ],
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 15.0),
-                              child: Text(
-                                "This week record",
-                                style: TextStyle(color: Colors.grey),
+          body: SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 25),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Image.asset(
+                            'assets/images/healthy.png',
+                            width: 40,
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Column(
+                            children: [
+                              Row(
+                                children: [
+                                  Text(
+                                    "Healthy Life",
+                                    style: TextStyle(fontSize: 20),
+                                  ),
+                                ],
                               ),
-                            )
-                          ],
-                        ),
-                      ],
-                    ),
-                    UserContainer()
-                  ],
-                ),
-                SizedBox(
-                  height: 40,
-                ),
-                ConstrainedBox(
-                  constraints: BoxConstraints(maxHeight: 70),
-                  child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      primary: false,
-                      shrinkWrap: true,
-                      itemCount: dailyProgress.length,
-                      itemBuilder: (context, index) {
-                        return WeekProgress(
-                            text: dailyProgress[index].text,
-                            value: dailyProgress[index].value);
-                      }),
-                ),
-                RadialGauge(),
-                SizedBox(height: 20),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Daily",
-                      style: TextStyle(color: Colors.grey[400]),
-                    ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Column(
-                      children: [
-                        Text(
-                          "Weekly",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Color.fromRGBO(41, 73, 126, 1)),
-                        ),
-                        Icon(
-                          Icons.arrow_drop_up_rounded,
-                          color: Color.fromRGBO(41, 73, 126, 1),
-                        )
-                      ],
-                    ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Text(
-                      "Monthly",
-                      style: TextStyle(color: Colors.grey[400]),
-                    )
-                  ],
-                ),
-                SizedBox(height: 20),
-                SliderInput(
-                  value: 150,
-                  text: "Lose weight",
-                  color: Color.fromRGBO(0, 218, 175, 1),
-                ),
-                SizedBox(height: 30),
-                SliderInput(
-                  value: 180,
-                  text: "Drinking water",
-                  color: Color.fromRGBO(5, 68, 171, 1),
-                ),
-              ],
+                              Padding(
+                                padding: const EdgeInsets.only(left: 15.0),
+                                child: Text(
+                                  "This week record",
+                                  style: TextStyle(color: Colors.grey),
+                                ),
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
+                      UserContainer()
+                    ],
+                  ),
+                  SizedBox(
+                    height: 40,
+                  ),
+                  ConstrainedBox(
+                    constraints: BoxConstraints(maxHeight: 70),
+                    child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        primary: false,
+                        shrinkWrap: true,
+                        itemCount: dailyProgress.length,
+                        itemBuilder: (context, index) {
+                          return WeekProgress(
+                              text: dailyProgress[index].text,
+                              value: dailyProgress[index].value);
+                        }),
+                  ),
+                  RadialGauge(),
+                  SizedBox(height: 20),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Daily",
+                        style: TextStyle(color: Colors.grey[400]),
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Column(
+                        children: [
+                          Text(
+                            "Weekly",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Color.fromRGBO(41, 73, 126, 1)),
+                          ),
+                          Icon(
+                            Icons.arrow_drop_up_rounded,
+                            color: Color.fromRGBO(41, 73, 126, 1),
+                          )
+                        ],
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Text(
+                        "Monthly",
+                        style: TextStyle(color: Colors.grey[400]),
+                      )
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  SliderInput(
+                    value: 150,
+                    text: "Lose weight",
+                    color: Color.fromRGBO(0, 218, 175, 1),
+                  ),
+                  SizedBox(height: 30),
+                  SliderInput(
+                    value: 180,
+                    text: "Drinking water",
+                    color: Color.fromRGBO(5, 68, 171, 1),
+                  ),
+                ],
+              ),
             ),
           ),
           bottomNavigationBar: Padding(
