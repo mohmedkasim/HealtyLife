@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gym_schedule/ExampleData.dart';
 import 'package:gym_schedule/components/radial_gauge.dart';
+import 'package:gym_schedule/components/slider_input.dart';
 import 'package:gym_schedule/components/user_account_container.dart';
 import 'package:gym_schedule/components/week_progress.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
@@ -107,6 +108,18 @@ class _HomeScreenState extends State<HomeScreen> {
                       style: TextStyle(color: Colors.grey[400]),
                     )
                   ],
+                ),
+                SizedBox(height: 20),
+                SliderInput(
+                  value: 150,
+                  text: "Lose weight",
+                  color: Color.fromRGBO(0, 218, 175, 1),
+                ),
+                SizedBox(height: 30),
+                SliderInput(
+                  value: 180,
+                  text: "Drinking water",
+                  color: Color.fromRGBO(5, 68, 171, 1),
                 )
               ],
             ),
