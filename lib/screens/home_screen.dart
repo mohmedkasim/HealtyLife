@@ -97,8 +97,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                 fontWeight: FontWeight.bold,
                                 color: Color.fromRGBO(41, 73, 126, 1)),
                           ),
+                          SizedBox(height: 5),
                           Icon(
-                            Icons.arrow_drop_up_rounded,
+                            Icons.circle,
+                            size: 5,
                             color: Color.fromRGBO(41, 73, 126, 1),
                           )
                         ],
