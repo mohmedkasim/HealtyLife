@@ -18,7 +18,10 @@ class _SliderInputState extends State<SliderInput> {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        Text(widget.text),
+        Text(
+          widget.text,
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
         SizedBox(height: 10),
         Row(
           children: [
