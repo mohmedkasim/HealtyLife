@@ -13,12 +13,13 @@ class WeekProgress extends StatelessWidget {
       child: Column(
         children: [
           CircularPercentIndicator(
+            backgroundColor: Color.fromRGBO(224, 240, 235, 1),
             animation: true,
             radius: MediaQuery.of(context).size.width / 10,
             lineWidth: 5.0,
             percent: value,
             animateFromLastPercent: true,
-            progressColor: Colors.green,
+            progressColor: Color.fromRGBO(0, 218, 175, 1),
             circularStrokeCap: CircularStrokeCap.round,
           ),
           SizedBox(
