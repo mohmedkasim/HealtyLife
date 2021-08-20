@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gym_schedule/ExampleData.dart';
 import 'package:gym_schedule/components/radial_gauge.dart';
 import 'package:gym_schedule/components/slider_input.dart';
 import 'package:gym_schedule/components/user_account_container.dart';
 import 'package:gym_schedule/components/week_progress.dart';
+import 'package:gym_schedule/screens/record_day.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -59,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
                 SizedBox(
-                  height: 50,
+                  height: 40,
                 ),
                 ConstrainedBox(
                   constraints: BoxConstraints(maxHeight: 70),
@@ -120,6 +122,39 @@ class _HomeScreenState extends State<HomeScreen> {
                   value: 180,
                   text: "Drinking water",
                   color: Color.fromRGBO(5, 68, 171, 1),
+                ),
+              ],
+            ),
+          ),
+          bottomNavigationBar: Padding(
+            padding:
+                const EdgeInsets.only(right: 30, left: 30, top: 10, bottom: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                SvgPicture.asset(
+                  'assets/images/scale.svg',
+                  width: 30,
+                  color: Colors.grey,
+                ),
+                SvgPicture.asset(
+                  'assets/images/apple-juice.svg',
+                  width: 30,
+                  color: Colors.grey,
+                ),
+                GestureDetector(
+                  onTap: () => Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => DailyRecord())),
+                  child: SvgPicture.asset(
+                    'assets/images/muscles.svg',
+                    width: 30,
+                    color: Colors.grey,
+                  ),
+                ),
+                SvgPicture.asset(
+                  'assets/images/jump-rope.svg',
+                  width: 30,
+                  color: Colors.grey,
                 )
               ],
             ),
