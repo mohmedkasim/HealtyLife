@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'Healthy life App',
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           fontFamily: "josefin",
           primarySwatch: Colors.blue,
