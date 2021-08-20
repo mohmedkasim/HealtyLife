@@ -16,6 +16,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   percent_indicator: ^3.0.1
   syncfusion_flutter_gauges: ^19.2.56
+  flutter_svg: ^0.22.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
