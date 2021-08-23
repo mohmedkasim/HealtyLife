@@ -1,6 +1,6 @@
 # gym_schedule
 
-A new Flutter project.
+[example code](https://github.com/victorbonnet/flutter_card_selector/blob/master/example/lib/main.dart)
 
 ## Getting Started
 
