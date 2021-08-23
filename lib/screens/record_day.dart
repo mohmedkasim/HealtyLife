@@ -44,7 +44,7 @@ class _DailyRecordState extends State<DailyRecord> {
                       UserContainer()
                     ],
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(height: 40),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.end,
