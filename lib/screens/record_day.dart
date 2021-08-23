@@ -1,4 +1,6 @@
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:gym_schedule/components/lineChart.dart';
 import 'package:gym_schedule/components/user_account_container.dart';
 
 class DailyRecord extends StatefulWidget {
@@ -97,7 +99,9 @@ class _DailyRecordState extends State<DailyRecord> {
                         ],
                       )
                     ],
-                  )
+                  ),
+                  SizedBox(height: 30),
+                  LineChartSample1()
                 ],
               ),
             ),
