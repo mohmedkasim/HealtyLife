@@ -1,3 +1,4 @@
+import 'package:card_selector/card_selector.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:gym_schedule/components/lineChart.dart';
@@ -9,8 +10,28 @@ class DailyRecord extends StatefulWidget {
 }
 
 class _DailyRecordState extends State<DailyRecord> {
+  var list = ["1", "2", "3", "4", "5"];
+  var colors = [
+    Colors.blue,
+    Colors.grey,
+    Colors.red,
+    Colors.cyan,
+    Colors.amber
+  ];
+
   @override
   Widget build(BuildContext context) {
+    List<Widget> widgets = [];
+    for (int i = 0; i < 5; i++) {
+      widgets.add(Container(
+        color: colors[i],
+        child: Center(
+            child: Text(
+          list[i],
+          style: Theme.of(context).textTheme.title,
+        )),
+      ));
+    }
     return Container(
       color: Colors.white,
       child: SafeArea(
@@ -101,7 +122,19 @@ class _DailyRecordState extends State<DailyRecord> {
                     ],
                   ),
                   SizedBox(height: 30),
-                  LineChartSample1()
+                  LineChartSample1(),
+                  Padding(
+                    padding: EdgeInsets.only(top: 80.0),
+                    child: CardSelector(
+                      cards: widgets,
+                      mainCardWidth: 240,
+                      mainCardHeight: 150,
+                      mainCardPadding: -32,
+                      cardAnimationDurationMs: 200,
+                      cardsGap: 24.0,
+                      dropTargetWidth: 8.0,
+                    ),
+                  )
                 ],
               ),
             ),
